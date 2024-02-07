@@ -21,6 +21,11 @@ const instituteSchema = new mongoose.Schema({
       ref: "Student",
     },
   ],
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
 });
 
 const Institute = mongoose.model("Institute", instituteSchema);

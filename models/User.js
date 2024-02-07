@@ -20,11 +20,12 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  role: {
+  accountType: {
     type: String,
     enum: ["Student", "Instructor", "Institute", "Admin"],
     required: true,
   },
+  contact: {},
 });
 
 const User = mongoose.model("User", userSchema);
